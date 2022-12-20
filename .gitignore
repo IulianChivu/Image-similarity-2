@@ -135,3 +135,6 @@ dmypy.json
 *.pt
 *.json
 faiss_index
+
+/data
+/oxford_*

@@ -7,6 +7,9 @@ import faiss
 import torch
 from torchvision import transforms
 
+import os
+os.environ['KMP_DUPLICATE_LIB_OK']='True'
+
 image_path = sys.argv[1]
 
 model = torch.load("model_test_2_resnet.pt")

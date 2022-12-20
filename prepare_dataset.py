@@ -11,20 +11,21 @@ classes = {}
 # iterate through the list of files
 for file in file_list:
     # extract the class name from the file name
-    split_class_name = file.split('_')
-    if len(split_class_name) == 3:
-        class_name = split_class_name[0] + "_" + split_class_name[1]
+    if file[-3:] == 'jpg':
+        split_class_name = file.split('_')
+        if len(split_class_name) == 3:
+            class_name = split_class_name[0] + "_" + split_class_name[1]
 
-    if len(split_class_name) == 2:
-        class_name = split_class_name[0]
+        if len(split_class_name) == 2:
+            class_name = split_class_name[0]
 
-    # add the image to the list of images for the corresponding class
-    file = os.path.join(class_name, file)
-    file = os.path.join("data", file)
-    if class_name in classes:
-        classes[class_name].append(file)
-    else:
-        classes[class_name] = [file]
+        # add the image to the list of images for the corresponding class
+        file = os.path.join(class_name, file)
+        file = os.path.join("data", file)
+        if class_name in classes:
+            classes[class_name].append(file)
+        else:
+            classes[class_name] = [file]
 
 # the classes dictionary now contains the images grouped by class
 for class_name in classes:
