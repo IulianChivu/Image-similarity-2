@@ -14,5 +14,5 @@
 9) Se ruleaza comanda in cli anaconda: python find_most_similar_image_lbp.py [path_catre_imagine_de_intrare] de exemplu: python find_most_similar_image_lbp.py oxford_dataset_splited\test\3\balliol_000116.jpg
 
 
-#Train
+# Train
 Proiect_SCCV_Image_Retrieval_CNN.ipynb -> scriptul complet care contine si partea de antrenare a retelei CNN
